@@ -90,7 +90,7 @@ def saludame(nombre):
 
 print(saludame("Julian Obando"))
 
-#Ejemplo 6: 
+#Ejemplo 6 calculadora: 
 
 print("#########EJEMPLO6##########")
 
