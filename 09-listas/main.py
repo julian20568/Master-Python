@@ -34,3 +34,17 @@ print(peliculas[1:])#saca todos los elementos de la lista a partir de indice 1
 cantantes.append("Redimido2")
 cantantes.append("Julio Melgar")
 print(cantantes)
+
+#Recorrer una lista
+
+nueva_pelicula = ""
+while nueva_pelicula != "parar":
+    nueva_pelicula = input("introduce la nueva pelicula: ")
+
+    if nueva_pelicula != "parar":
+        peliculas.append(nueva_pelicula)
+
+print("\n*****LISTADO DE PELICULAS******")
+for pelicula in peliculas:
+    print(f"{peliculas.index(pelicula)+1}. {pelicula}")
+
