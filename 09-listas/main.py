@@ -36,7 +36,7 @@ cantantes.append("Julio Melgar")
 print(cantantes)
 
 #Recorrer una lista
-
+"""
 nueva_pelicula = ""
 while nueva_pelicula != "parar":
     nueva_pelicula = input("introduce la nueva pelicula: ")
@@ -47,4 +47,33 @@ while nueva_pelicula != "parar":
 print("\n*****LISTADO DE PELICULAS******")
 for pelicula in peliculas:
     print(f"{peliculas.index(pelicula)+1}. {pelicula}")
+"""
 
+#Listas multidimensionales
+
+print("\n********LISTADO DE CONTACTOS********")
+contactos = [
+    [# posicion 0
+        'Antonio',#elemento 0
+        'antonio@antonio.com'#elemento 1
+    ],
+    [# posicion 1
+        'Luis',#elemento 0
+        'luis@luis.com'#elemento 1
+    ],
+    [# posicion 1
+        'Salvador',#elemento 0
+        'salvador@salvador.com'#elemento 1
+    ]
+]
+
+for contacto in contactos:
+    print("\n")
+    for elemento in contacto:
+        if contacto.index(elemento) == 0:
+            print("Nombre: " + elemento)
+        else:
+            print("Email: " + elemento)
+
+#print(contactos)
+#print(contactos[1][1])#posicion 1 - 1
