@@ -1,0 +1,153 @@
+1. instalaciòn git
+
+1. Abrir el terminal de la computadora
+2. sudo apt-get install git
+<-------------------------------------->
+
+2. Configuraciòn
+
+1. git config --global user.email "jaop17@hotmail.com"
+2. git config --global user.name "Julian"
+3. git config --global - e
+4. git config --global -l
+5. git config --list
+Para modificar corremos los mismos comando y reescribimos
+
+3. Estados de git para adminsirar las versiones que maneja (3 estados)
+1. Modificado (Working directory) --> directorio de trabajo
+2. Preparado (Staging Area) --> area de preparacion
+3. Confirmado (.git directory (Repository)) --> repositorios    locales (repositorio de git)
+
+para pasar el archivo de Working directory --> Staging Area usamos git add
+luego para pasar Staging Area --> .git directory (Repository) usamos git commit
+<----------------------------------------------------------------->
+
+4. Creando un repositorio local
+
+1. Crear el directorio --> mkdir primerRepositorio
+2. Acceder al directorio --> cd primerRepositorio
+3. Crear archivos en el directorio --> touch inicio.php
+4. Iniciar el proyecto --> git init
+
+5. Haciendo un commit (modificarlo, eliminarlo)
+
+1. ver estado --> git status
+2. git add ejemplo.php --> ingresar un archivo a la vez
+3. git add . --> subir varios archivos
+4. Empaquetar archivos para saber que ya termino mi primer version del proyecto --> git commit -m "mi primer commit"
+5. Ver modificacion exacta que se hizo --> git diff
+6. Eliminar un archvo del staging --> git reset HEAD ejemplo.php
+
+6. Deshacer cambios en git
+
+1. Modificar archivo --> git commit -m "Segundocommit"
+2. Deshacer cambios anteriores (volver a la version anterior) --> git checkout .
+
+7.  Visualizando el historial de cambios
+
+1. git log
+
+8. Regresa version especifica de commit
+
+1. git checkout 59dfdfd985d6f5d9fd99677fd
+
+
+
+
+11. Añadir un repositorio remoto que esta en github
+
+1. git init
+2. git status
+3. git add .
+4. git status
+5. git commit -m "Descripciòn del commit"
+6. git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
+   git remote add origin https://github.com/julian20568/Repositorio-Python.git
+7. git push -u origin master
+<----------------------------------------------------------------------------->
+
+13. Creacion de una rama
+
+1. git branch modificacion --> crear rama
+2. git branch --> ver en que rama estoy
+3. git checkout modificacion --> me cambie a esta rama
+
+14.Como fusionar ramas
+
+1. crear un nuevo archivo ejemplo.php
+2. code notacion.txt
+3. git add .
+4. git status
+5. git commit -m "descripcion del commit"
+6. git status
+7. git marge modificacion -->unificar los archivos creados en la rama de modificacion
+8. git branch -d modificacion --> elimina la rama creada
+9. grit branch
+
+
+15 Resolver conflictos (1era parte)
+
+1. creamos una nueva rama --> git branch actualizando
+2. git checkout  actualizando
+3. ls --> ver archivos
+4. code ejemplo.php --> modificar este archivo
+5. git status
+6. git add . --> subir al staging
+7. git commit -m "descripcion commit"
+8. git checkout master --> Volver a la master y modificamos el archivo ejemplo.php
+9. code ejemplo.php --> lo modificamos
+10. git add .
+11. git commit -m "descripcion commit"
+12. git merge actualizando --> me sale un conflicto porque fue modificado en dos ramas diferentes
+13. elegir con cual branch se va a quedar y se elimina el resto de codigo
+14. git add .
+15. git commit -m "solucionando conflictos"
+
+16. Resolviendo conflictos (parte 2)
+
+1.Agregar un colaborador a nuestro proyecto en github
+2. actualizar el archivo desde nuestra rama master
+3. hacer push --> git push origin master --> me sale conflicto porque hemos hecho actualizaciones al mismo archivo mi colaborador y yo
+4. git add ejemplo.php
+5. git commit -m "modificando localmente el archivo ejemplo.php"
+6. git push origin master --> sale otro conflicto
+7. git pull origin master
+8. Eliminamos las lineas de codigo que no queremos
+9. git add .
+10. git commit -m "marge"
+11. git push origin master
+
+17. haciendo pull --> traer cambios de nuestro equipo al repositorio local
+
+1. entramos al archivo ejemplo.php y lo editamos
+2.hago el commit
+3.trater informacion de mi colaborador --> git pull origin master
+
+18. pull request
+1. ingresamos al archivo ejemplo.php y lo editamos
+
+19. Ignorar archivos o carpetas
+
+1. generear un nuevo archvo comentarios.txt dentro de nuestro proyecto
+2.  dentro de nuestro proyecto generamos un nuevo archivo llamado .gitignore y dentro escribimos el nombre del archivo que queremos ignorar (comentarios.txt)
+
+20. visual studio code
+
+1. Proyecto tiendamascotas, dentro tenemos el directorio img y index.html
+2. parte izquierda del editor vemos control de fuente y podemos que nuestro proyecto este vinculado a git.
+3. le damos en mas y seleccionamos el proyecto y creamos el     repositorio local.
+4. ir a github y crear el respositorio
+5. git init ya lo hice en visual studio code
+6. git status
+7. git add .
+8. git status
+9. git commit -m "creando primer commit desde el visual studio code"
+10.  git remote add origin vinculo del respositorio de github
+11. git push -u origin master
+
+
+Eliminar repositorio
+1. rm -rf .git
+
+Eliminar ficheros
+git add -u
